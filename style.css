@@ -1,0 +1,34 @@
+body{
+  font-family: 'Ariel';
+  margin: 0;
+  padding: 0;
+}
+
+.first{
+  letter-spacing: 17px;
+  word-spacing: 5px;
+  color: orange;
+}
+.second{
+  letter-spacing: 15px;
+  text-decoration: underline;
+  color: gray;
+}
+.third{
+  letter-spacing: 10px;
+  text-align: center;
+  color: #ff3366;
+}
+.fourth{
+  letter-spacing: 6px;
+  text-align: right;
+  color: red;
+  text-transform: lowercase;
+}
+.fifth{
+  letter-spacing: 7px;
+  text-align: center;
+  color: green;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
