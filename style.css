@@ -1,34 +1,39 @@
-body{
-  font-family: 'Ariel';
-  margin: 0;
-  padding: 0;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: grey
 }
 
-.first{
-  letter-spacing: 17px;
-  word-spacing: 5px;
-  color: orange;
+.lesson {
+    width: 900px;
+    margin: 30px auto;
+    border: 5px;
+    border-radius: 8px;
+    background-color: aliceblue;
+    padding: 20px;
 }
-.second{
-  letter-spacing: 15px;
-  text-decoration: underline;
-  color: gray;
+
+.lesson img {
+    display: block;
+    margin: 20px auto;
 }
-.third{
-  letter-spacing: 10px;
-  text-align: center;
-  color: #ff3366;
+
+form label {
+    display: block;
 }
-.fourth{
-  letter-spacing: 6px;
-  text-align: right;
-  color: red;
-  text-transform: lowercase;
+
+form input {
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
 }
-.fifth{
-  letter-spacing: 7px;
-  text-align: center;
-  color: green;
-  text-transform: uppercase;
-  text-decoration: underline;
+
+form button {
+    background-color: blue;
+    color: white;
+    padding: 10px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+   
 }
