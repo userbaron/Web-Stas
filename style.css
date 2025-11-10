@@ -1,39 +1,25 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: grey
+table{
+    border: 1px solid rgb(10, 176, 176);
+    width: 500px;
+    border-collapse: collapse;      
 }
-
-.lesson {
-    width: 900px;
-    margin: 30px auto;
-    border: 5px;
-    border-radius: 8px;
-    background-color: aliceblue;
-    padding: 20px;
+th, td{
+    border: 2px solid rgb(10, 176, 176);
 }
-
-.lesson img {
-    display: block;
-    margin: 20px auto;
+th{
+    font-size: 17px;
 }
-
-form label {
-    display: block;
+td{
+    font-size: 17px;
+    text-align: center;
+    border: 2px 2px;
+    margin: 2px 2px;
 }
-
-form input {
-    display: block;
-    width: 100%;
-    padding: 10px 10px;
-    box-sizing: border-box;
+caption{
+    color: rgb(243, 243, 44);
+    font-size: 35px;
+    font-weight: bold;
 }
-
-form button {
-    background-color: blue;
-    color: white;
-    padding: 10px 10px;
-    margin-top: 10px;
-    cursor: pointer;
-   
+body{
+    border: 2px;
 }
