@@ -1,22 +1,36 @@
-table:nth-child(even){
+body{
+    font-family: sans-serif;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    gap: 5px;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+button{
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.box{
     border: 1px solid black;
-    width: 500px;
-    border-collapse: collapse;
-    background-color: gray;    
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    transition: 0.2s;
 }
-table:nth-child(odd){
-    border: 1px solid black;
-    width: 500px;
-    border-collapse: collapse;
-    background-color: white;    
-}
-th, td{
-    text-align: right;
-    border: 1px solid black;
-}
-tr:nth-child(odd){
-    background-color: rgb(188, 188, 188);
-}
-.fgfgf{
-   text-align: center;
+.highlight{
+    background-color: yellow;
 }

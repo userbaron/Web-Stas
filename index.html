@@ -7,32 +7,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Товар</th>
-            <th>Цена</th>
-        </tr>
-        <tr>
-            <td>Посудомойка</td>
-            <td>10000</td>
-        </tr>
-        <tr>
-            <td>Холодильник</td>
-            <td>40000</td>
-        </tr>
-        <tr>
-            <td>Пылесос</td>
-            <td>15000</td>
-        </tr>
-        <tr>
-            <td>Стол</td>
-            <td>5000</td>
-        </tr>
-        <tr>
-            <td colspan="2" class="fgfgf">Итого: 70000</td>
-        </tr>
-        
+    <h1>Получаем элементы из HTML</h1>
+    <div class="buttons">
+        <button onclick="highlightById()">getElementById()</button>
+        <button onclick="highlightByClass()">getElementByClassName()</button>
+        <button onclick="highlightByTag()">getElementByTagName()</button>
+        <button onclick="highlightBySelector()">querySelector()</button>
+        <button onclick="highlightBySelectorAll()">querySelectorAll()</button>
+    </div>
+    <div class="conteiner">
+        <div id="unique" class="box">ID: unique</div>
+        <div class="special box">Class: special</div>
+        <div class="special box">Class: special</div>
+        <div class="box">Tag: DIV</div>
+        <p class="box">Tag: P</p>
+        <div class="box" data-info="selector">[data-info="selector"]</div>
 
-    </table>
+    </div>
+    <script>
+        function clearHighlights(){
+            document.querySelectorAll('.highlight').forEach(el => el.classList.remove('highlight'));
+        }
+        function highlightById(){
+            clearHighlights();
+            const element = document.getElementById("unique");
+            element.classList.add("highlight");
+        }
+        function highlightByClass(){
+            clearHighlights();
+            const elements = document.getElementsByClassName("special");
+            for (let el of elements){
+                el.classList.add('highlight');
+            }
+        }
+        function highlightByTag(){
+            clearHighlights();
+            const elements = document.getElementsByTagName("p");
+            for (let el of elements){
+                el.classList.add('highlight');
+            }
+        }
+        function highlightBySelector(){
+            clearHighlights();
+            const element = document.querySelector('[data-info="selector"]');
+            element.classList.add("highlight");
+        }
+        function highlightBySelectorAll(){
+            clearHighlights();
+            const elements = document.querySelectorAll(".box");
+            for(let el of elements){
+                el.classList.add('highlight');
+            }
+        }
+    </script>
 </body>
 </html>
