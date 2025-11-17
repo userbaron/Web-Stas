@@ -3,62 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ресторан Ромашка</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Получаем элементы из HTML</h1>
-    <div class="buttons">
-        <button onclick="highlightById()">getElementById()</button>
-        <button onclick="highlightByClass()">getElementByClassName()</button>
-        <button onclick="highlightByTag()">getElementByTagName()</button>
-        <button onclick="highlightBySelector()">querySelector()</button>
-        <button onclick="highlightBySelectorAll()">querySelectorAll()</button>
+<body>    
+    <div class="container">
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
     </div>
-    <div class="conteiner">
-        <div id="unique" class="box">ID: unique</div>
-        <div class="special box">Class: special</div>
-        <div class="special box">Class: special</div>
-        <div class="box">Tag: DIV</div>
-        <p class="box">Tag: P</p>
-        <div class="box" data-info="selector">[data-info="selector"]</div>
-
-    </div>
-    <script>
-        function clearHighlights(){
-            document.querySelectorAll('.highlight').forEach(el => el.classList.remove('highlight'));
-        }
-        function highlightById(){
-            clearHighlights();
-            const element = document.getElementById("unique");
-            element.classList.add("highlight");
-        }
-        function highlightByClass(){
-            clearHighlights();
-            const elements = document.getElementsByClassName("special");
-            for (let el of elements){
-                el.classList.add('highlight');
-            }
-        }
-        function highlightByTag(){
-            clearHighlights();
-            const elements = document.getElementsByTagName("p");
-            for (let el of elements){
-                el.classList.add('highlight');
-            }
-        }
-        function highlightBySelector(){
-            clearHighlights();
-            const element = document.querySelector('[data-info="selector"]');
-            element.classList.add("highlight");
-        }
-        function highlightBySelectorAll(){
-            clearHighlights();
-            const elements = document.querySelectorAll(".box");
-            for(let el of elements){
-                el.classList.add('highlight');
-            }
-        }
-    </script>
 </body>
 </html>
