@@ -1,24 +1,28 @@
-const input = "   Привет, меня зовут Иван! Мне 25 лет. Я люблю JavaScript.   ";
+const profile = {
+    name: "Иван", 
+    age: 30,
+    contacts: {
+        city: "Москва",
+        street: "Ленина",
+        house: 20,
+        phone: "+79998887766"
+    },
+    skills: ["JavaScript", "HTML", "CSS"],
+    job: null
+};
 
-let inp = input;
-inp = input.trim().toLowerCase();
+console.log(`Имя: ${profile.name}, возраст: ${profile.age}, город: ${profile.contacts.city}, улица: ${profile.contacts.street}, дом: ${profile.contacts.house}, номер телефона: ${profile.contacts.phone}, навыки: ${profile.skills}, работа: ${profile.job}`);
 
-console.log(inp.length);
-console.log(inp[0]);
-console.log(inp[inp.length - 1]);
-let cnt = 0;
-for(let i = 0; i < inp.length; i++){
-    if (inp[i] == "а"){
-        cnt++;
-    }
+if (profile.job?.title){
+    console.log("Работа найдена");
 }
-console.log(cnt);
-let inp2 = inp.split(' ');
-let ma = 0;
-for(let i = 0; i < inp2.length; i++){
-    if (inp2[i].length > ma){
-        ma = i;
-    }
+else{
+    console.log("Работа не найдена");
 }
-console.log(inp2[ma]);
-console.log(`Слов в тексте: ${inp2.length}. Самое длинное слово: ${inp2[ma]}.`)
+
+function getFullAddress(user){
+    const {city, street, house} = user.contacts;
+    return `${city}, ${street}, ${house}`;
+}
+
+console.log(getFullAddress(profile));
